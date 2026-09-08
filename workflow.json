@@ -1,0 +1,2042 @@
+{
+  "nodes": [
+    {
+      "nodeId": "448745",
+      "name": "流程开始",
+      "intro": "",
+      "avatar": "core/workflow/template/workflowStart",
+      "flowNodeType": "workflowStart",
+      "position": {
+        "x": -5085,
+        "y": -1170
+      },
+      "version": "481",
+      "inputs": [
+        {
+          "key": "userChatInput",
+          "label": "workflow:user_question",
+          "valueType": "string",
+          "required": true,
+          "selectedType": "reference",
+          "renderTypeList": [
+            "agentGenerated",
+            "reference",
+            "textarea"
+          ],
+          "debugLabel": "",
+          "toolDescription": "用户问题",
+          "defaultToAgentGenerated": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "userChatInput",
+          "key": "userChatInput",
+          "type": "static",
+          "valueType": "string",
+          "label": "common:core.module.input.label.user question",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "nodeId": "jqJhWg34srkDsXBt",
+      "name": "AI 对话：信息猎手",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": -2295,
+        "y": -1335
+      },
+      "version": "4.9.7",
+      "inputs": [
+        {
+          "key": "modelId",
+          "label": "common:core.module.input.label.aiModel",
+          "valueType": "string",
+          "selectedType": "settingLLMModel",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "value": "6a997b9fedaae05e18a0a2fb",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "temperature",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": "system",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatAudio",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": false,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVideo",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": false,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatExtractFiles",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatReasoning",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatReasoningEffort",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatTopP",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatStopSign",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatResponseFormat",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatJsonSchema",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "label": "common:core.ai.Prompt",
+          "valueType": "string",
+          "isRichText": true,
+          "placeholder": "common:core.app.tip.chatNodeSystemPromptTip",
+          "maxLength": 100000,
+          "selectedType": "textarea",
+          "renderTypeList": [
+            "agentGenerated",
+            "textarea",
+            "reference"
+          ],
+          "value": "1. {{$jXteNLkakfPOTuUJ.gR0mkQpJ4Og8$}}\n2. 你将收到统一化处理后的资讯数据，每条含字段：title（标题）、content（摘要）、link（链接）、media（来源）、publish_date（发布时间）。\n3. \n4. 【搜索数据】\n5. 铁律：\n6. 1. 每条资讯必须标注 publish_date，按时间从新到旧排列，只收录近30天内容\n7. 2. 每条结论后附原文链接，格式 [标题](link)，链接必须取自数据中 link 字段的原值，禁止编造或改写\n8. 3. 若【搜索数据】整体为空或为占位文本，直接回复\"今日日报生成失败，请检查数据源\"，禁止自行编写任何日报内容\n9. \n10. 请基于以上数据生成今日AI行业日报。\n11. ",
+          "debugLabel": "",
+          "description": "common:core.app.tip.systemPromptTip",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "label": "common:core.module.input.label.chat history",
+          "valueType": "chatHistory",
+          "required": true,
+          "max": 50,
+          "min": 0,
+          "selectedType": "numberInput",
+          "renderTypeList": [
+            "agentGenerated",
+            "numberInput",
+            "reference"
+          ],
+          "value": 0,
+          "debugLabel": "",
+          "description": "workflow:max_dialog_rounds",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "label": "",
+          "valueType": "datasetQuote",
+          "selectedType": "settingDatasetQuotePrompt",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "debugLabel": "知识库引用",
+          "description": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "fileUrlList",
+          "label": "app:workflow.user_file_input",
+          "valueType": "arrayString",
+          "selectedType": "reference",
+          "renderTypeList": [
+            "agentGenerated",
+            "reference",
+            "JSONEditor"
+          ],
+          "debugLabel": "文件链接",
+          "description": "app:workflow.user_file_input_desc",
+          "toolDescription": "",
+          "defaultToAgentGenerated": true
+        },
+        {
+          "key": "userChatInput",
+          "label": "workflow:user_question",
+          "valueType": "string",
+          "required": true,
+          "selectedType": "reference",
+          "renderTypeList": [
+            "agentGenerated",
+            "reference",
+            "textarea"
+          ],
+          "value": [
+            "448745",
+            "userChatInput"
+          ],
+          "debugLabel": "",
+          "toolDescription": "user question",
+          "defaultToAgentGenerated": true
+        },
+        {
+          "key": "model",
+          "label": "common:core.module.input.label.aiModel",
+          "valueType": "string",
+          "selectedType": "settingLLMModel",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "value": "deepseek-v4-pro",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "type": "static",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "label": "common:core.module.output.label.New context",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "required": true
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "type": "static",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "common:core.module.output.label.Ai response content",
+          "description": "将在 stream 回复完毕后触发",
+          "required": true
+        },
+        {
+          "id": "reasoningText",
+          "key": "reasoningText",
+          "type": "static",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "workflow:reasoning_content",
+          "description": "",
+          "required": false,
+          "invalid": false
+        },
+        {
+          "id": "system_error_text",
+          "key": "system_error_text",
+          "type": "error",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "workflow:error_text",
+          "description": ""
+        }
+      ],
+      "catchError": false
+    },
+    {
+      "nodeId": "yBvqoqlfaEQEPhtL",
+      "name": "AI 对话：首席分析师",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": -450,
+        "y": -1335
+      },
+      "version": "4.9.7",
+      "inputs": [
+        {
+          "key": "modelId",
+          "label": "common:core.module.input.label.aiModel",
+          "valueType": "string",
+          "selectedType": "settingLLMModel",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "value": "6a997b9fedaae05e18a0a2fb",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "temperature",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": "system",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatAudio",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": false,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVideo",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": false,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatExtractFiles",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatReasoning",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatReasoningEffort",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatTopP",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatStopSign",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatResponseFormat",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatJsonSchema",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "label": "common:core.ai.Prompt",
+          "valueType": "string",
+          "isRichText": true,
+          "placeholder": "common:core.app.tip.chatNodeSystemPromptTip",
+          "maxLength": 100000,
+          "selectedType": "textarea",
+          "renderTypeList": [
+            "agentGenerated",
+            "textarea",
+            "reference"
+          ],
+          "value": "\n你是一位资深AI行业分析师，拥有10年科技行业研究经验。\n\n【待分析的资讯列表】\n以下是由事实核查员标记过可信度的资讯列表，请按任务要求分析。\n\n【评级铁律】\n1. 事实核查员标记为[可验证：高]的资讯 → 正常评级，可给4-5星\n2. 事实核查员标记为[可验证：中]的资讯 → 谨慎评级，最高给3星\n3. 事实核查员标记为[可验证：低]的资讯 → 严格执行\"二选一\"：\n  - 方案A（降级）：给1-2星，解读中明确写\"该信息来源有限，目前仅有单一自媒体/匿名信源报道，需谨慎采信\"\n  - 方案B（升星）：必须在解读中补充新的权威信源，否则严禁给3星以上\n4. 严禁\"两头都要\"：不能既不给补充信源，又想给高星级吸引点击\n\n任务要求：\n1. 收到资讯列表后，先进行去重和事实核查\n2. 按行业影响力进行1-5星重要性评级\n3. 识别资讯之间的关联趋势（如：多轮融资指向同一赛道）\n4. 输出热点TOP5，每条包含：\n  - 热点标题\n  - 重要性星级\n  - 深度解读（100字以内，说明为什么重要、对行业的影响）\n  - 关联趋势（如有）\n\n注意：不要严格按日期过滤，只要资讯内容有价值就纳入评级。总字数控制在800字以内，只输出分析结果，不要寒暄。",
+          "debugLabel": "",
+          "description": "common:core.app.tip.systemPromptTip",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "label": "common:core.module.input.label.chat history",
+          "valueType": "chatHistory",
+          "required": true,
+          "max": 50,
+          "min": 0,
+          "selectedType": "numberInput",
+          "renderTypeList": [
+            "agentGenerated",
+            "numberInput",
+            "reference"
+          ],
+          "value": 0,
+          "debugLabel": "",
+          "description": "workflow:max_dialog_rounds",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "label": "",
+          "valueType": "datasetQuote",
+          "selectedType": "settingDatasetQuotePrompt",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "debugLabel": "知识库引用",
+          "description": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "fileUrlList",
+          "label": "app:workflow.user_file_input",
+          "valueType": "arrayString",
+          "selectedType": "reference",
+          "renderTypeList": [
+            "agentGenerated",
+            "reference",
+            "JSONEditor"
+          ],
+          "debugLabel": "文件链接",
+          "description": "app:workflow.user_file_input_desc",
+          "toolDescription": "",
+          "defaultToAgentGenerated": true
+        },
+        {
+          "key": "userChatInput",
+          "label": "workflow:user_question",
+          "valueType": "string",
+          "required": true,
+          "selectedType": "reference",
+          "renderTypeList": [
+            "agentGenerated",
+            "reference",
+            "textarea"
+          ],
+          "value": [
+            "wTnAqcdpuLPGlOSy",
+            "answerText"
+          ],
+          "debugLabel": "",
+          "toolDescription": "user question",
+          "defaultToAgentGenerated": true
+        },
+        {
+          "key": "model",
+          "label": "common:core.module.input.label.aiModel",
+          "valueType": "string",
+          "selectedType": "settingLLMModel",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "value": "deepseek-v4-pro",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "type": "static",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "label": "common:core.module.output.label.New context",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "required": true
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "type": "static",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "common:core.module.output.label.Ai response content",
+          "description": "将在 stream 回复完毕后触发",
+          "required": true
+        },
+        {
+          "id": "reasoningText",
+          "key": "reasoningText",
+          "type": "static",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "workflow:reasoning_content",
+          "description": "",
+          "required": false,
+          "invalid": false
+        },
+        {
+          "id": "system_error_text",
+          "key": "system_error_text",
+          "type": "error",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "workflow:error_text",
+          "description": ""
+        }
+      ],
+      "catchError": false
+    },
+    {
+      "nodeId": "n99wc5naANPaisyT",
+      "name": "AI 对话：执行总编",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": 405,
+        "y": -1320
+      },
+      "version": "4.9.7",
+      "inputs": [
+        {
+          "key": "modelId",
+          "label": "common:core.module.input.label.aiModel",
+          "valueType": "string",
+          "selectedType": "settingLLMModel",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "value": "6a997b9fedaae05e18a0a2fb",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "temperature",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": "system",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatAudio",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": false,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVideo",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": false,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatExtractFiles",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatReasoning",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatReasoningEffort",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatTopP",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatStopSign",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatResponseFormat",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatJsonSchema",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "label": "common:core.ai.Prompt",
+          "valueType": "string",
+          "isRichText": true,
+          "placeholder": "common:core.app.tip.chatNodeSystemPromptTip",
+          "maxLength": 100000,
+          "selectedType": "textarea",
+          "renderTypeList": [
+            "agentGenerated",
+            "textarea",
+            "reference"
+          ],
+          "value": "{{$jqJhWg34srkDsXBt.answerText$}}\n你将收到一份基于当日真实搜索数据生成的AI行业日报初稿：\n你将以执行总编身份把初稿改写为深度日报，规则如下：\n1. 只允许使用初稿中出现的事件、日期、数字和链接，严禁新增任何初稿中没有的资讯、链接或数据\n2. 输出结构：导语 → 热点TOP5（星级评分 + 核心内容 + 影响分析）→ 今日概览表（模型层/算力/应用/监管四个维度）\n3. 影响分析分别面向创业者、投资人、从业者三个视角\n4. 保留初稿中全部原文链接，格式 [标题](链接)\n5. 如果初稿内容为空，或显示\"搜索数据为空/日报生成失败\"，你直接回复\"今日日报生成失败，请检查数据源\"，禁止自行编撰任何内容\n6. 报告日期必须使用【当前时间】的日期，禁止使用初稿以外的任何日期推断\n",
+          "debugLabel": "",
+          "description": "common:core.app.tip.systemPromptTip",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "label": "common:core.module.input.label.chat history",
+          "valueType": "chatHistory",
+          "required": true,
+          "max": 50,
+          "min": 0,
+          "selectedType": "numberInput",
+          "renderTypeList": [
+            "agentGenerated",
+            "numberInput",
+            "reference"
+          ],
+          "value": 0,
+          "debugLabel": "",
+          "description": "workflow:max_dialog_rounds",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "label": "",
+          "valueType": "datasetQuote",
+          "selectedType": "settingDatasetQuotePrompt",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "debugLabel": "知识库引用",
+          "description": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "fileUrlList",
+          "label": "app:workflow.user_file_input",
+          "valueType": "arrayString",
+          "selectedType": "reference",
+          "renderTypeList": [
+            "agentGenerated",
+            "reference",
+            "JSONEditor"
+          ],
+          "debugLabel": "文件链接",
+          "description": "app:workflow.user_file_input_desc",
+          "toolDescription": "",
+          "defaultToAgentGenerated": true
+        },
+        {
+          "key": "userChatInput",
+          "label": "workflow:user_question",
+          "valueType": "string",
+          "required": true,
+          "selectedType": "reference",
+          "renderTypeList": [
+            "agentGenerated",
+            "reference",
+            "textarea"
+          ],
+          "value": [
+            "448745",
+            "userChatInput"
+          ],
+          "debugLabel": "",
+          "toolDescription": "user question",
+          "defaultToAgentGenerated": true
+        },
+        {
+          "key": "model",
+          "label": "common:core.module.input.label.aiModel",
+          "valueType": "string",
+          "selectedType": "settingLLMModel",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "value": "deepseek-v4-pro",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "type": "static",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "label": "common:core.module.output.label.New context",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "required": true
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "type": "static",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "common:core.module.output.label.Ai response content",
+          "description": "将在 stream 回复完毕后触发",
+          "required": true
+        },
+        {
+          "id": "reasoningText",
+          "key": "reasoningText",
+          "type": "static",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "workflow:reasoning_content",
+          "description": "",
+          "required": false,
+          "invalid": false
+        },
+        {
+          "id": "system_error_text",
+          "key": "system_error_text",
+          "type": "error",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "workflow:error_text",
+          "description": ""
+        }
+      ],
+      "catchError": false
+    },
+    {
+      "nodeId": "lCy34pisHjFgCqAX",
+      "name": "指定回复",
+      "intro": "该模块可以直接回复一段指定的内容。常用于引导、提示。非字符串内容传入时，会转成字符串进行输出。",
+      "avatar": "core/workflow/template/reply",
+      "flowNodeType": "answerNode",
+      "position": {
+        "x": 1485,
+        "y": -876
+      },
+      "inputs": [
+        {
+          "key": "text",
+          "label": "common:core.module.input.label.Response content",
+          "valueType": "any",
+          "required": true,
+          "isRichText": false,
+          "placeholder": "common:core.module.input.description.Response content",
+          "maxLength": 100000,
+          "selectedType": "textarea",
+          "renderTypeList": [
+            "agentGenerated",
+            "textarea",
+            "reference"
+          ],
+          "value": "{{$n99wc5naANPaisyT.answerText$}}",
+          "debugLabel": "",
+          "description": "common:core.module.input.description.Response content",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "nodeId": "wTnAqcdpuLPGlOSy",
+      "name": "事实核查员",
+      "intro": "AI 大模型对话",
+      "avatar": "core/workflow/template/aiChat",
+      "flowNodeType": "chatNode",
+      "showStatus": true,
+      "position": {
+        "x": -1395,
+        "y": -1335
+      },
+      "version": "4.9.7",
+      "inputs": [
+        {
+          "key": "modelId",
+          "label": "common:core.module.input.label.aiModel",
+          "valueType": "string",
+          "selectedType": "settingLLMModel",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "value": "6a997b9fedaae05e18a0a2fb",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "temperature",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "maxToken",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "isResponseAnswerText",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatQuoteRole",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": "system",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteTemplate",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "quotePrompt",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVision",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatAudio",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": false,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatVideo",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": false,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatExtractFiles",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatReasoning",
+          "label": "",
+          "valueType": "boolean",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": true,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatReasoningEffort",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatTopP",
+          "label": "",
+          "valueType": "number",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatStopSign",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatResponseFormat",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "aiChatJsonSchema",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "systemPrompt",
+          "label": "common:core.ai.Prompt",
+          "valueType": "string",
+          "isRichText": true,
+          "placeholder": "common:core.app.tip.chatNodeSystemPromptTip",
+          "maxLength": 100000,
+          "selectedType": "textarea",
+          "renderTypeList": [
+            "agentGenerated",
+            "textarea",
+            "reference"
+          ],
+          "value": "{{$jqJhWg34srkDsXBt.answerText$}}\n你是一位资深事实核查编辑。收到带链接的资讯列表后，逐条评估可验证性。\n\n任务要求：\n1. 对每条资讯标记可验证性等级：\n[可验证：高]：有官方来源（公司官网、政府文件、权威媒体如Reuters/TechCrunch/36氪），且链接可访问\n[可验证：中]：有多个媒体报道交叉验证，但无一手官方来源\n[可验证：低]：仅自媒体/匿名信源/单一来源，或内容含\"据传\"\"据悉\"等模糊表述\n1. 保留原始链接，不要删除\n2. 对[可验证：低]的资讯，在末尾加一行简要说明存疑原因\n3. 发布时间超过7天的资讯，额外标注[过期]并说明\n4. 只能基于输入中实际出现的资讯进行核查，禁止补充、推测或虚构任何输入中不存在的事件\n\n输出格式必须严格如下：\n\n[可验证：高] 标题 | 来源 | 摘要\n原文链接：https://xxx.com/...\n（无）\n\n[可验证：中] 标题 | 来源 | 摘要\n原文链接：https://xxx.com/...\n（无）\n\n[可验证：低] 标题 | 来源 | 摘要\n原文链接：https://xxx.com/...\n存疑说明：来源为自媒体，无官方确认\n\n重要禁令：\n- 如果输入为空或无有效资讯，只回复\"今日无待核查资讯\"，禁止基于自身知识编造任何内容\n- 禁止输出\"知识库\"字样\n- 禁止使用训练数据中的旧闻充当近期动态\n- 不输出总结表格、统计数字或寒暄，只输出带标记的资讯列表\n",
+          "debugLabel": "",
+          "description": "common:core.app.tip.systemPromptTip",
+          "toolDescription": ""
+        },
+        {
+          "key": "history",
+          "label": "common:core.module.input.label.chat history",
+          "valueType": "chatHistory",
+          "required": true,
+          "max": 50,
+          "min": 0,
+          "selectedType": "numberInput",
+          "renderTypeList": [
+            "agentGenerated",
+            "numberInput",
+            "reference"
+          ],
+          "value": 0,
+          "debugLabel": "",
+          "description": "workflow:max_dialog_rounds",
+          "toolDescription": ""
+        },
+        {
+          "key": "quoteQA",
+          "label": "",
+          "valueType": "datasetQuote",
+          "selectedType": "settingDatasetQuotePrompt",
+          "renderTypeList": [
+            "settingDatasetQuotePrompt"
+          ],
+          "debugLabel": "知识库引用",
+          "description": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "fileUrlList",
+          "label": "app:workflow.user_file_input",
+          "valueType": "arrayString",
+          "selectedType": "reference",
+          "renderTypeList": [
+            "agentGenerated",
+            "reference",
+            "JSONEditor"
+          ],
+          "debugLabel": "文件链接",
+          "description": "app:workflow.user_file_input_desc",
+          "toolDescription": "",
+          "defaultToAgentGenerated": true
+        },
+        {
+          "key": "userChatInput",
+          "label": "workflow:user_question",
+          "valueType": "string",
+          "required": true,
+          "selectedType": "reference",
+          "renderTypeList": [
+            "agentGenerated",
+            "reference",
+            "textarea"
+          ],
+          "value": [
+            "448745",
+            "userChatInput"
+          ],
+          "debugLabel": "",
+          "toolDescription": "user question",
+          "defaultToAgentGenerated": true
+        },
+        {
+          "key": "model",
+          "label": "common:core.module.input.label.aiModel",
+          "valueType": "string",
+          "selectedType": "settingLLMModel",
+          "renderTypeList": [
+            "settingLLMModel",
+            "reference"
+          ],
+          "value": "deepseek-v4-pro",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "history",
+          "key": "history",
+          "type": "static",
+          "valueType": "chatHistory",
+          "valueDesc": "{\n  obj: System | Human | AI;\n  value: string;\n}[]",
+          "label": "common:core.module.output.label.New context",
+          "description": "将本次回复内容拼接上历史记录，作为新的上下文返回",
+          "required": true
+        },
+        {
+          "id": "answerText",
+          "key": "answerText",
+          "type": "static",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "common:core.module.output.label.Ai response content",
+          "description": "将在 stream 回复完毕后触发",
+          "required": true
+        },
+        {
+          "id": "reasoningText",
+          "key": "reasoningText",
+          "type": "static",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "workflow:reasoning_content",
+          "description": "",
+          "required": false,
+          "invalid": false
+        },
+        {
+          "id": "system_error_text",
+          "key": "system_error_text",
+          "type": "error",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "workflow:error_text",
+          "description": ""
+        }
+      ],
+      "catchError": false
+    },
+    {
+      "nodeId": "yWUACWFpLyBE6J37",
+      "name": "HTTP 请求1",
+      "intro": "可以发出一个 HTTP 请求，实现更为复杂的操作（联网搜索、数据库查询等）",
+      "avatar": "core/workflow/template/httpRequest",
+      "flowNodeType": "httpRequest468",
+      "showStatus": true,
+      "position": {
+        "x": -4245,
+        "y": -1245
+      },
+      "inputs": [
+        {
+          "key": "system_httpMethod",
+          "label": "",
+          "valueType": "string",
+          "required": true,
+          "selectedType": "custom",
+          "renderTypeList": [
+            "custom"
+          ],
+          "value": "GET",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_httpTimeout",
+          "label": "",
+          "valueType": "number",
+          "required": true,
+          "max": 600,
+          "min": 5,
+          "selectedType": "custom",
+          "renderTypeList": [
+            "custom"
+          ],
+          "value": 30,
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_httpReqUrl",
+          "label": "",
+          "valueType": "string",
+          "required": true,
+          "placeholder": "https://api.ai.com/getInventory",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": "https://apis.tianapi.com/ai/index",
+          "debugLabel": "",
+          "description": "common:core.module.input.description.Http Request Url",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_header_secret",
+          "label": "",
+          "valueType": "object",
+          "required": false,
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_httpHeader",
+          "label": "",
+          "valueType": "any",
+          "required": false,
+          "placeholder": "common:core.module.input.description.Http Request Header",
+          "selectedType": "custom",
+          "renderTypeList": [
+            "custom"
+          ],
+          "value": [],
+          "debugLabel": "",
+          "description": "common:core.module.input.description.Http Request Header",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_httpParams",
+          "label": "",
+          "valueType": "any",
+          "required": false,
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": [
+            {
+              "key": "key",
+              "type": "string",
+              "value": "TIANAPI_KEY_PLACEHOLDER"
+            },
+            {
+              "key": "num",
+              "type": "string",
+              "value": "10"
+            },
+            {
+              "key": "word",
+              "type": "string",
+              "value": "AI"
+            }
+          ],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_httpJsonBody",
+          "label": "",
+          "valueType": "any",
+          "required": false,
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": "{\"search_engine\":\"search_std\",\"search_query\":\"AI行业最新动态\",\"count\":10}",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_httpFormBody",
+          "label": "",
+          "valueType": "any",
+          "required": false,
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": [],
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "system_httpContentType",
+          "label": "",
+          "valueType": "string",
+          "required": false,
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": "json",
+          "debugLabel": "",
+          "toolDescription": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "httpRawResponse",
+          "key": "httpRawResponse",
+          "type": "static",
+          "valueType": "any",
+          "valueDesc": "",
+          "label": "workflow:raw_response",
+          "description": "HTTP请求的原始响应。只能接受字符串或JSON类型响应数据。",
+          "required": true
+        },
+        {
+          "id": "system_httpRawError",
+          "key": "system_httpRawError",
+          "type": "error",
+          "valueType": "object",
+          "valueDesc": "",
+          "label": "workflow:http_full_error",
+          "description": "HTTP 请求失败时的完整错误对象，包含 message、status、code、data 等字段。"
+        },
+        {
+          "id": "error",
+          "key": "error",
+          "type": "error",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "workflow:error_text",
+          "description": ""
+        },
+        {
+          "id": "system_addOutputParam",
+          "key": "system_addOutputParam",
+          "type": "dynamic",
+          "valueType": "dynamic",
+          "valueDesc": "",
+          "label": "输出字段提取",
+          "description": "可以通过 JSONPath 语法来提取响应值中的指定字段",
+          "customFieldConfig": {
+            "selectValueTypeList": [
+              "string",
+              "number",
+              "boolean",
+              "object",
+              "arrayString",
+              "arrayNumber",
+              "arrayBoolean",
+              "arrayObject",
+              "arrayAny",
+              "any",
+              "chatHistory",
+              "datasetQuote",
+              "dynamic",
+              "selectDataset",
+              "selectApp"
+            ],
+            "showDefaultValue": false,
+            "showDescription": false
+          }
+        },
+        {
+          "id": "e1SB9d",
+          "key": "result.newslist",
+          "type": "dynamic",
+          "valueType": "arrayObject",
+          "valueDesc": "",
+          "label": "result.newslist",
+          "description": ""
+        }
+      ],
+      "catchError": false
+    },
+    {
+      "nodeId": "jXteNLkakfPOTuUJ",
+      "name": "代码运行",
+      "intro": "在沙盒里执行一段脚本代码，可用于进行复杂的数据处理，语法和可用依赖会受到限制。",
+      "avatar": "core/workflow/template/codeRun",
+      "flowNodeType": "code",
+      "showStatus": true,
+      "position": {
+        "x": -3105,
+        "y": -1260
+      },
+      "inputs": [
+        {
+          "key": "system_addInputParam",
+          "label": "",
+          "valueType": "dynamic",
+          "required": false,
+          "customInputConfig": {
+            "selectValueTypeList": [
+              "string",
+              "number",
+              "boolean",
+              "object",
+              "arrayString",
+              "arrayNumber",
+              "arrayBoolean",
+              "arrayObject",
+              "arrayAny",
+              "any",
+              "chatHistory",
+              "datasetQuote",
+              "dynamic",
+              "selectDataset",
+              "selectApp"
+            ],
+            "showDescription": false,
+            "showDefaultValue": true
+          },
+          "selectedType": "addInputParam",
+          "renderTypeList": [
+            "addInputParam"
+          ],
+          "debugLabel": "",
+          "description": "workflow:these_variables_will_be_input_parameters_for_code_execution",
+          "toolDescription": "",
+          "canAgentGenerated": false
+        },
+        {
+          "key": "codeType",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "hidden",
+          "renderTypeList": [
+            "hidden"
+          ],
+          "value": "js",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "code",
+          "label": "",
+          "valueType": "string",
+          "selectedType": "custom",
+          "renderTypeList": [
+            "custom"
+          ],
+          "value": "async function main({ data1 }) {\n\n  // ========== 统一化函数：把不同来源的字段转换成同一结构 ==========\n  const normalize = (title, content, link, media, date) => ({\n    title: String(title || '').trim(),\n    content: String(content || '').trim(),\n    link: String(link || '').trim(),\n    media: String(media || '').trim(),\n    publish_date: String(date || '').trim()\n  });\n\n  // ========== 数据源1：天聚AI资讯接口 ==========\n  const source1 = (Array.isArray(data1) ? data1 : []).map(item =>\n    normalize(\n      item.title,        // 标题\n      item.description,  // 摘要\n      item.url,          // 链接\n      item.source,       // 来源\n      item.ctime         // 时间\n    )\n  );\n\n  // 合并所有数据源（以后加新源，在这里扩展即可）\n  const unified = [...source1];\n\n  // ========== 拼接成喂给AI的文本 ==========\n  const unified_text = unified\n    .map((item, i) =>\n      `${i + 1}. 【${item.title}】\\n摘要：${item.content}\\n来源：${item.media}｜时间：${item.publish_date}\\n链接：${item.link}`\n    )\n    .join('\\n\\n');\n\n  return { unified, unified_text };\n}\n",
+          "debugLabel": "",
+          "toolDescription": ""
+        },
+        {
+          "key": "data1",
+          "label": "data1",
+          "valueType": "arrayObject",
+          "required": true,
+          "customInputConfig": {
+            "selectValueTypeList": [
+              "string",
+              "number",
+              "boolean",
+              "object",
+              "arrayString",
+              "arrayNumber",
+              "arrayBoolean",
+              "arrayObject",
+              "arrayAny",
+              "any",
+              "chatHistory",
+              "datasetQuote",
+              "dynamic",
+              "selectDataset",
+              "selectApp"
+            ],
+            "showDescription": false,
+            "showDefaultValue": true
+          },
+          "selectedType": "reference",
+          "renderTypeList": [
+            "reference"
+          ],
+          "value": [
+            "yWUACWFpLyBE6J37",
+            "e1SB9d"
+          ],
+          "canAgentGenerated": false,
+          "canEdit": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "system_rawResponse",
+          "key": "system_rawResponse",
+          "type": "static",
+          "valueType": "object",
+          "valueDesc": "",
+          "label": "workflow:full_response_data",
+          "description": ""
+        },
+        {
+          "id": "error",
+          "key": "error",
+          "type": "error",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "workflow:error_text",
+          "description": ""
+        },
+        {
+          "id": "system_addOutputParam",
+          "key": "system_addOutputParam",
+          "type": "dynamic",
+          "valueType": "dynamic",
+          "valueDesc": "",
+          "label": "",
+          "description": "将代码中 return 的对象作为输出，传递给后续的节点。变量名需要对应 return 的 key",
+          "customFieldConfig": {
+            "selectValueTypeList": [
+              "string",
+              "number",
+              "boolean",
+              "object",
+              "arrayString",
+              "arrayNumber",
+              "arrayBoolean",
+              "arrayObject",
+              "arrayAny",
+              "any",
+              "chatHistory",
+              "datasetQuote",
+              "dynamic",
+              "selectDataset",
+              "selectApp"
+            ],
+            "showDefaultValue": false,
+            "showDescription": false
+          }
+        },
+        {
+          "id": "qLUQfhG0ILRX",
+          "key": "unified",
+          "type": "dynamic",
+          "valueType": "arrayObject",
+          "valueDesc": "",
+          "label": "unified",
+          "description": ""
+        },
+        {
+          "id": "gR0mkQpJ4Og8",
+          "key": "unified_text",
+          "type": "dynamic",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "unified_text",
+          "description": ""
+        }
+      ],
+      "catchError": false
+    },
+    {
+      "nodeId": "hNaUHQjqp5M43a4B",
+      "name": "飞书 webhook",
+      "intro": "向飞书机器人发起 webhook 请求。",
+      "toolDescription": "向飞书机器人发起 webhook 请求。",
+      "avatar": "https://file.fastgpt.cn/8b8varl7-fastgpt-cn-production-plugin-public/system/plugin/feishu/0.1.1/d64fc6e8/logo.svg",
+      "flowNodeType": "tool",
+      "showStatus": true,
+      "position": {
+        "x": 2415,
+        "y": -1170
+      },
+      "version": "0.1.1",
+      "inputs": [
+        {
+          "key": "content",
+          "label": "content",
+          "valueType": "string",
+          "required": true,
+          "selectedType": "reference",
+          "renderTypeList": [
+            "agentGenerated",
+            "input",
+            "reference"
+          ],
+          "value": [
+            "n99wc5naANPaisyT",
+            "answerText"
+          ],
+          "description": "需要发送的消息",
+          "toolDescription": "需要发送的消息",
+          "defaultToAgentGenerated": true,
+          "customJsonSchema": {
+            "type": "string",
+            "title": "content",
+            "description": "需要发送的消息",
+            "toolDescription": "需要发送的消息",
+            "isToolParam": true
+          }
+        },
+        {
+          "key": "hook_url",
+          "label": "hook_url",
+          "valueType": "string",
+          "required": true,
+          "selectedType": "input",
+          "renderTypeList": [
+            "agentGenerated",
+            "input",
+            "reference"
+          ],
+          "value": "WEBHOOK_URL_PLACEHOLDER",
+          "description": "飞书机器人地址",
+          "toolDescription": "飞书机器人地址",
+          "defaultToAgentGenerated": false,
+          "customJsonSchema": {
+            "type": "string",
+            "title": "hook_url",
+            "description": "飞书机器人地址",
+            "toolDescription": "飞书机器人地址",
+            "isToolParam": false
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "key": "result",
+          "type": "static",
+          "valueType": "object",
+          "valueDesc": "",
+          "label": "result",
+          "description": "",
+          "required": true
+        },
+        {
+          "id": "system_error_text",
+          "key": "system_error_text",
+          "type": "error",
+          "valueType": "string",
+          "valueDesc": "",
+          "label": "错误信息",
+          "description": ""
+        }
+      ],
+      "pluginId": "systemTool-feishu",
+      "toolConfig": {
+        "systemTool": {
+          "toolId": "systemTool-feishu"
+        }
+      },
+      "catchError": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "wTnAqcdpuLPGlOSy",
+      "target": "yBvqoqlfaEQEPhtL",
+      "sourceHandle": "wTnAqcdpuLPGlOSy-source-right",
+      "targetHandle": "yBvqoqlfaEQEPhtL-target-left"
+    },
+    {
+      "source": "yBvqoqlfaEQEPhtL",
+      "target": "n99wc5naANPaisyT",
+      "sourceHandle": "yBvqoqlfaEQEPhtL-source-right",
+      "targetHandle": "n99wc5naANPaisyT-target-left"
+    },
+    {
+      "source": "jqJhWg34srkDsXBt",
+      "target": "wTnAqcdpuLPGlOSy",
+      "sourceHandle": "jqJhWg34srkDsXBt-source-right",
+      "targetHandle": "wTnAqcdpuLPGlOSy-target-left"
+    },
+    {
+      "source": "448745",
+      "target": "yWUACWFpLyBE6J37",
+      "sourceHandle": "448745-source-right",
+      "targetHandle": "yWUACWFpLyBE6J37-target-left"
+    },
+    {
+      "source": "n99wc5naANPaisyT",
+      "target": "lCy34pisHjFgCqAX",
+      "sourceHandle": "n99wc5naANPaisyT-source-right",
+      "targetHandle": "lCy34pisHjFgCqAX-target-left"
+    },
+    {
+      "source": "yWUACWFpLyBE6J37",
+      "target": "jXteNLkakfPOTuUJ",
+      "sourceHandle": "yWUACWFpLyBE6J37-source-right",
+      "targetHandle": "jXteNLkakfPOTuUJ-target-left"
+    },
+    {
+      "source": "jXteNLkakfPOTuUJ",
+      "target": "jqJhWg34srkDsXBt",
+      "sourceHandle": "jXteNLkakfPOTuUJ-source-right",
+      "targetHandle": "jqJhWg34srkDsXBt-target-left"
+    },
+    {
+      "source": "lCy34pisHjFgCqAX",
+      "target": "hNaUHQjqp5M43a4B",
+      "sourceHandle": "lCy34pisHjFgCqAX-source-right",
+      "targetHandle": "hNaUHQjqp5M43a4B-target-left"
+    }
+  ],
+  "chatConfig": {
+    "welcomeText": "",
+    "welcomeConfig": {
+      "welcomeText": ""
+    },
+    "variables": [],
+    "questionGuide": {
+      "open": false
+    },
+    "ttsConfig": {
+      "type": "web"
+    },
+    "whisperConfig": {
+      "open": false,
+      "autoSend": false,
+      "autoTTSResponse": false
+    },
+    "scheduledTriggerConfig": {
+      "cronString": "0 8 * * *",
+      "timezone": "Asia/Shanghai",
+      "defaultPrompt": "生成今日AI行业日报\n"
+    }
+  },
+  "type": "advanced",
+  "name": "ai日报生成器",
+  "intro": ""
+}
