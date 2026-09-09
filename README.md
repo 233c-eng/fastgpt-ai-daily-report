@@ -65,7 +65,7 @@
 
 ## 📄 产出样例
 
-完整日报输出示例见 👉 [docs/sample-output.md](docs/sample-output.md)
+完整日报输出示例[docs/sample-output.md](docs/sample-output.md)
 
 ## 🚀 快速开始
 
