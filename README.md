@@ -65,7 +65,7 @@
 
 ## 📄 产出样例
 
-见 [docs/sample-output.md](docs/sample-output.md)（2026-09-06 实际产出的完整日报）
+完整日报输出示例见 👉 [docs/sample-output.md](docs/sample-output.md)
 
 ## 🚀 快速开始
 
