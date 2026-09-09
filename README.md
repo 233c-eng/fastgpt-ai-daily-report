@@ -1,5 +1,4 @@
-<img width="1920" height="1033" alt="image" src="https://github.com/user-attachments/assets/6f8f80ef-d84a-4986-80d8-396dec060165" />
-
+# 📰 FastGPT 多 Agent AI 行业日报系统 
 > 基于 FastGPT 左转流程编排引擎构建的六节点多 Agent 协作流水线，实现每日 08:00（北京时间）无人值守自动产出可溯源的 AI 行业深度日报，并推送至飞书群。
 
 ## ✨ 项目亮点
