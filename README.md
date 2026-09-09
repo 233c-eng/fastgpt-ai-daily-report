@@ -63,11 +63,11 @@
 
 
 
-## 📄 产出样例
+##📄产出样例
 
-完整日报输出示例[docs/sample-output.md](docs/sample-output.md)
+完整日报输出示例见👉[docs/sample-output.md](docs/sample-output.md)
 
-## 🚀 快速开始
+##🚀快速开始
 
 1. 导入 `workflow.json` 至 FastGPT（需支持工作流编排 + 定时执行的版本）
 2. 在 HTTP 请求节点替换天行 API Key（搜索 `TIANAPI_KEY_PLACEHOLDER`）
